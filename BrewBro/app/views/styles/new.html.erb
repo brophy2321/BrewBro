@@ -6,5 +6,7 @@
   </p>
   <p>
     <%= f.submit %>
+    <%= form_for :style, url: styles_path do |f| %>
   </p>
 <% end %>
+<%= link_to 'Back', styles_path %>
