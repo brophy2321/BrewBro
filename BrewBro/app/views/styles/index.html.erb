@@ -1,0 +1,14 @@
+<h1> Index </h1>
+
+  <table>
+      <tr>
+        <th> Style </th>
+      </tr>
+
+      <% @styles.each do |style| %>
+        <tr>
+            <td> <%= style.style %> </td>
+            <td><%= link_to 'Show', style_path(style) %></td>
+          </tr>
+          <% end %>
+        </table>
