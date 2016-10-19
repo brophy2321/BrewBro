@@ -3,22 +3,28 @@
     <%= @style.style %>
   </p>
   <h2> IPA's in this Style </h2>
-<% @style.beers.each do |beer| %>
-<p>
+  <% @style.beers.each do |beer| %>
 
-  <p>
-    <img src = "<%= beer.img_url %>"/>
+
+    <p>
+      <img src = "<%= beer.img_url %>"/>
+    </p>
+    <p>
+      <strong>Name:</strong>
+      <%= beer.name %>
+    </p>
+    <p>
+      <strong>Brewery:</strong>
+      <%= beer.brewery %>
+    </p>
+    <strong>ABV:</strong>
+    <%= beer.abv %>
   </p>
-<p>
-   <strong>Name:</strong>
-   <%= beer.name %>
- </p>
- <p>
-   <strong>Brewery:</strong>
-   <%= beer.brewery %>
- </p>
- <strong>ABV:</strong>
- <%= beer.abv %>
+  <p>
+  <%= link_to 'Delete IPA', [beer.style, beer],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+
 </p>
   <% end %>
   <h2> Add a Beer </h2>
