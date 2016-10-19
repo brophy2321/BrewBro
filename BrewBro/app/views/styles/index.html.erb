@@ -10,6 +10,9 @@
             <td> <%= style.style %> </td>
             <td><%= link_to 'Show', style_path(style) %></td>
             <td><%= link_to 'Edit', edit_style_path(style) %> </td>
+            <td><%= link_to 'Delete', style_path(style),
+                    method: :delete,
+                    data: { confirm: 'Are you sure you want to delete this style?' } %> </td>
           </tr>
           <% end %>
         </table>

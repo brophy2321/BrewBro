@@ -33,7 +33,12 @@ class StylesController < ApplicationController
       render 'edit'
     end
   end
+  def destroy
+    @style = Style.find(params[:id])
+    @style.destroy
 
+      redirect_to styles_path
+    end
   private
   def style_params
     params.require( :style).permit( :style)

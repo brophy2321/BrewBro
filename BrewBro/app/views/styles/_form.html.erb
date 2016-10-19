@@ -1,11 +1,6 @@
-<h1> Styles of IPA's </h1>
-<!-- able to add form after creating _form.html.erb -->
-<%= render 'form' %>
-<%= link_to 'Back', styles_path %>
+<%= form_for @style do |f| %>
 
-
-<!-- <%= form_for :style, url: styles_path do |f| %>
-<% if @style.errors.any? %>
+  <% if @style.errors.any? %>
     <div id="error_explanation">
       <h2>
         <%= pluralize(@style.errors.count, "error") %> prohibited
@@ -23,9 +18,10 @@
     <%= f.label :style %><br>
     <%= f.text_field :style %>
   </p>
+
+
   <p>
     <%= f.submit %>
-    <%= form_for :style, url: styles_path do |f| %>
-    <% end %>
   </p>
-<% end %> -->
+
+<% end %>
