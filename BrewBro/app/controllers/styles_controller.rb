@@ -1,7 +1,7 @@
 class StylesController < ApplicationController
-def index
-  @styles = Style.all
-end
+  def index
+    @styles = Style.all
+  end
 
   def show
     @style = Style.find(params[ :id])
@@ -11,17 +11,31 @@ end
     @style = Style.new
   end
 
+  def edit
+    @style = Style.find(params[:id])
+  end
+
   def create
     @style = Style.new(style_params)
     if @style.save
-    redirect_to @style
-  else
+      redirect_to @style
+    else
       render 'new'
-    end 
+    end
+  end
+
+  def update
+    @style = Style.find(params[:id])
+
+    if @style.update(style_params)
+      redirect_to @style
+    else
+      render 'edit'
+    end
   end
 
   private
-    def style_params
-        params.require( :style).permit( :style)
-      end
+  def style_params
+    params.require( :style).permit( :style)
+  end
 end
