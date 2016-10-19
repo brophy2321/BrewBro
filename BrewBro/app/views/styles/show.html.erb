@@ -1,6 +1,46 @@
 <p>
-    <strong>Style:<?strong>
-        <%= @style.style %>
-      </p>
-<%= link_to 'Edit', edit_style_path(@style) %>
-<%= link_to 'Back', styles_path %>
+  <strong>Style:<?strong>
+    <%= @style.style %>
+  </p>
+  <h2> IPA's in this Style </h2>
+
+
+
+
+
+
+
+
+  <h2> Add a Beer </h2>
+  <%= form_for ([@style, @beer]) do |f| %>
+
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :brewery %><br>
+    <%= f.text_field :brewery %>
+  </p>
+  <p>
+    <%= f.label :abv %><br>
+    <%= f.text_field :abv %>
+  </p>
+  <p>
+    <%= f.label :img_url %><br>
+    <%= f.text_field :img_url%>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+  <% end %>
+
+
+
+
+
+
+
+  <%= link_to 'Edit', edit_style_path(@style) %>
+  <%= link_to 'Back', styles_path %>

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-resources :styles
-
+resources :styles do
+  resources :beers
+end
 
   get 'ipa/index'
   root 'ipa#index'
