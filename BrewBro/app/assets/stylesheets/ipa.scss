@@ -1,3 +1,32 @@
 // Place all the styles related to the IPA controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+  color: black;
+  font-size: 60px;
+  -webkit-text-stroke-width: 1.5px;
+   -webkit-text-stroke-color: yellow;
+  display:flex;
+  justify-content: center;
+  font: georgia;
+}
+body {
+    background-image: url("http://epicureandculture.com/wp-content/uploads/2015/06/Eco-friendly-breweries-cover-photo-e1435500655842.jpg");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+p {
+  font: white;
+}
+
+
+a {
+ color: black;
+ font-size: 50px;
+ text-decoration: none;
+ display: flex;
+ justify-content: center;
+ -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: yellow;
+}
