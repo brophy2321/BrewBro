@@ -3,14 +3,24 @@
     <%= @style.style %>
   </p>
   <h2> IPA's in this Style </h2>
+<% @style.beers.each do |beer| %>
+<p>
 
-
-
-
-
-
-
-
+  <p>
+    <img src = "<%= beer.img_url %>"/>
+  </p>
+<p>
+   <strong>Name:</strong>
+   <%= beer.name %>
+ </p>
+ <p>
+   <strong>Brewery:</strong>
+   <%= beer.brewery %>
+ </p>
+ <strong>ABV:</strong>
+ <%= beer.abv %>
+</p>
+  <% end %>
   <h2> Add a Beer </h2>
   <%= form_for ([@style, @beer]) do |f| %>
 
